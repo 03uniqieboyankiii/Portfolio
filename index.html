@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber Appointment System - Signup</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+      
+    <style>
+        /* Centralizing all text elements */
+        h1, h2, p, b,h, .photo {
+            text-align: center;
+        }
+
+        body {
+            overflow-y: scroll; /* Always show the vertical scrollbar */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container to hold and animate the content */
+        .animate-container {
+            position: absolute;
+            left: 100%; /* Start off-screen on the right */
+            white-space: nowrap; /* Prevents wrapping of content */
+            animation: moveContent 200s linear infinite;
+            
+        }
+        .latest{
+            position: relative;
+            left: 100%; /* Start off-screen on the right */
+            white-space: nowrap; /* Prevents wrapping of content */
+            animation: moveContent1 20s linear infinite;
+            font-size: 60px;
+            
+        }
+        
+
+        .static-content {
+            padding: 550px;
+             /* Maintain static position of animation */
+             margin-bottom:360px ;
+        }
+        
+
+        /* Keyframes for the animation */
+        @keyframes moveContent {
+            0% { right: 100%; }  /* Start from the right end (off-screen) */
+            100% { left: -46980px; } /* Move to the left end (off-screen) */
+        }
+        @keyframes moveContent1 {
+            0% { right: 100%; }  /* Start from the right end (off-screen) */
+            100% { left: -200px; } /* Move to the left end (off-screen) */
+        }
+        
+
+        .image-container img {
+            display: inline-block;
+            margin-right: 20px;
+            margin-bottom: 80px;
+        
+        }
+        
+
+
+        .extra-space {
+            margin-top: 70px; /* Adjust this value to increase space */
+            padding: 20px;
+        }
+
+        
+        hr{
+            border:0.1em solid #050505;
+        }
+       
+       
+        
+        /* Style the navigation bar */
+        nav {
+            position: relative;
+            display: flex;
+        }
+
+        /* Style the dropdown button */
+        .dropbtn {
+            color: rgb(0, 0, 0);
+            font-size: 45px;
+            border: none;
+            cursor: pointer;
+            
+            
+        }
+
+        /* Style the dropdown content (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(148, 148, 145);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(14, 13, 13, 0.2);
+            z-index: 0;
+            width: 420px;
+            height: 500px;
+            margin-left: 200px;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 40px;
+            position :relative;
+        }
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {background-color:  #ffffff}
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+            text-align: center;
+        }
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+            background-color:  rgba(14, 13, 13, 0.2);
+        }
+        .animate-container {
+            z-index: 0; /* Ensure the animation stays below */
+        }
+        .dropdown{
+            width: 850px; height: 0px;
+            padding-bottom: 800px;
+            display:inline-block;
+        }
+        .container{
+           max-width: 10000px;
+           margin-bottom: 0px;
+           max-height: 700px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="dropdown">
+            <button class="dropbtn">Coding Skill</button>
+            <div class="dropdown-content" style="height: 180px;">
+                <a href="https://auth.geeksforgeeks.org/user/aniketgav1b3/practice">GeeksforGeeks Profile</a>
+                <a href="https://www.hackerrank.com/profile/aniketgawali215">HackerRank Profile</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">DSA notes</button>
+            <div class="dropdown-content" style="height: 80px;">
+                <a href="https://dsanotes.tiiny.site">Download notes</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Core knowlege</button>
+            <div class="dropdown-content" style="height: 410px;">
+                <a href="">DBMS</a>
+                <a href="">OS</a>
+                <a href="">CN</a>
+                <a href="">Software Engineering</a>
+                <a href="">OOP</a>
+                <a href="">System Design</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Apptitude Preration</button>
+            <div class="dropdown-content" style="height: 160px;">
+                <a href="https://crackapti.tiiny.site">Download 50 Days Apti Placement RoadMap</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Projects</button>
+            <div class="dropdown-content" style="height: 80px;">
+                <a href="https://03uniqieboyankiii.github.io/NewBarberShop/index.html">Integrated Salon</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Work Experiance</button>
+            <div class="dropdown-content" style="height:760px;">
+                <a href="https://programmers.io/">IBMi Developer intern @programmers.io</a>
+                <a href="https://unstop.com/">Campus Executive @Unstop</a>
+                <a href="https://www.geeksforgeeks.org/">Campus Mantri @GeeksforGeeks</a>
+                <a href="https://shorturl.at/dmRBq">Microsoft Learn Student Ambassador @Microsoft</a>
+                <a href="https://shorturl.at/NSG89">Co-founder @TechXNinjas</a>
+                <a href="https://shorturl.at/NSG89">GeeksforGeeks student chapter @PCCOER</a>
+            </div>
+        </div>
+
+        
+    </nav>
+
+    <h1>Aniket Gawali</h1>
+
+    <div>
+            <div>
+                <a href="https://purple-milicent-46.tiiny.site" class= "latest"target="_blank" style="text-decoration: none; color: rgb(59, 8, 177);">
+                    Click here to download Resume
+                </a>
+            </div>
+    </div>
+
+    <h4>Hello, Aniket this side from PCCOER PUNE Maharshtra, an B.Tech CSE pre-final year tech enthusiasist</h4>
+    <hr>
+
+    <div class="animate-container">
+            <div class="image-container">
+                <img src="UC9.jpg" width="1620" height="1500">
+                <img src="c1.jpg" width="1800" height="1500">
+                <img src="Sandeep_sir_PCCOE2.jpg" width="1620" height="1500">
+                <img src="c2.jpg" width="1800" height="1500">
+                <img src="UC2.jpg" width="1620" height="1500">
+                <img src="c3.jpg" width="1800" height="1500">
+                <img src="UC3.jpg" width="1620" height="1500">
+                <img src="c4.jpg" width="1800" height="1500">
+                <img src="UC4.jpg" width="1620" height="1500">
+                <img src="c5.jpg" width="1800" height="1500">
+                <img src="UC6.jpg" width="1620" height="1500">
+                <img src="c6.jpg" width="1800" height="1500">
+                <img src="UC7.jpg" width="1620" height="1500">
+                <img src="UC8.jpg" width="1620" height="1500">
+                <img src="MaTPO GD IDOL 24.jpg" width="1620" height="1500">
+                <img src="GFG_HOODI.jpg" width="1620" height="1500">
+                <img src="c7.jpg" width="1800" height="1500">
+                <img src="GFGxPCCOER_EVENT.jpg" width="1620" height="1500">
+                <img src="c8.jpg" width="1800" height="1500">
+                <img src="Sandeep_sir_PCCOE.jpg" width="1620" height="1500">
+                <img src="Postman_certificate.jpg" width="1620" height="1500">
+                <img src="UC1.jpg" width="1620" height="1500">
+                <img src="MLSA @Microsoft.jpg" width="1620" height="1500">
+                <img src="Sandeep_sir_PCCOE3.jpg" width="1620" height="1500">
+                <img src="Pic_in_GFG_Hoodi.jpg" width="1620" height="1500">
+                <img src="Builder_tshirt.jpg" width="1620" height="1500">
+                <img src="Naukari_Certigicate.jpg" width="1620" height="1500">
+                <img src="campus_mantri_tshirt.jpg" width="1620" height="1500">
+            </div>
+    </div>
+
+    <div class="static-content"></div>
+    <div class="extra-space"></div>
+    
+    <hr>
+    <h2> <b>Let's Know More About Myself</b></h2>
+    <br>
+    <div><p style="font-size: 70px;">Hello connections! Aniket this side, the computer science voice form Pune Maharashtra. I'm pursuing B.Tech in CSE from PCCoE &R</p></div>
+    <div><p style="font-size: 70px;"> <b>Pimpri Chinchwad College of Engineering and Research</b></p></div>
+    <img src="pccoer1.png">
+    <div><p style="font-size: 70px;"> <b>🎖️Technical skills: (hard skills)</b></p></div>
+    <div><p style="font-size: 70px;"> VCS: Git & GiHub</p></div>
+    <div><p style="font-size: 70px;"> Front end development: HTML5, CSS3, JS</p></div>
+    <div><p style="font-size: 70px;"> JS Frameworks:-  node, express</p></div>
+    <div><p style="font-size: 70px;"> Tech Stack: MERN </p> </div>
+    <div><p style="font-size: 70px;"> Preferred Programming language: JAVA programming + DSA in JAVA (150+ problem)</p></div>
+    <div><p style="font-size: 70px;"> Preferred IDE: Intellij </p></div>
+    <div><p style="font-size: 70px;"> internship:IBMi Developer intern @programmers.io | Ex-intern @GeeksForGeeks</p></div>
+    <div><p style="font-size: 70px;"> Projects: 1.Online Barber Appointment System 2.Real-Time startup website </p></div>
+    <br>
+    <div><p style="font-size: 70px;"> <b>🎖️Non technical skills: (Soft skills)</b></p></div>
+    <div><p style="font-size: 70px;"> Leadership & team work capabilities: Co-founder @TechXNinjas +  part of geeksforgeeks community ( student chapter ) + </p></div>
+    <div><p style="font-size: 70px;"> PCET's Youth conference community.</p></div>
+    <div><p style="font-size: 70px;"> Communication skills:  level 7 speaker @Acefluency, Anchor for college events.</p></div>
+    <br>
+    <div><p style="font-size: 70px;"><b>🎖️Certifications:</b>  </p></div>
+    <div><p style="font-size: 70px;">  1. Flipkart Grid Challenge certified (5.0 and 6.0)</p></div>
+    <div><p style="font-size: 70px;"> 2. EY executive challenge certified</p></div>
+    <div><p style="font-size: 70px;"> 3. TATA imagination assessment challenge assessment certified.</p></div>
+    <div><p style="font-size: 70px;">4. SAMSUNG AI treasure hunt certified. </p></div>
+    <div><p style="font-size: 70px;"> 5. AI-Speech Hackathon certified organised by Aitch Nu Global Technologies</p></div>
+    <div><p style="font-size: 70px;">6. TATA Crucible campus quiz 2024</p></div></p></div>
+
+
+    <!-- Contact Section -->
+<section id="contact" style="padding: 0px 0; background-color: rgb(194, 193, 189);">
+    <div class="container">
+      <h2 style="text-align: center; font-size: 80px; color:rgb(44, 44, 43);">Contact</h2>
+      <div style="display: flex; justify-content: center; align-items: center; gap: 500px; margin-top: 20px; text-align: center;">
+        <h2 style="color:rgb(59, 59, 58);"><strong>Phone:</strong> <a href="tel:+917350868522" style="color:rgb(59, 59, 58);">+91 73508 68522</a></h2>
+        <h2 style="color:rgb(59, 59, 58);"><strong>Email:</strong> <a href="mailto:aniketgawali215@gmail.com" style="color:rgb(59, 59, 58); text-decoration: none;">aniketgawali215@gmail.com</a></h2>
+        <h2 style="color:rgb(59, 59, 58);"><strong>Address:</strong> Bhavani Peth, Pune, Maharashtra, 411042, India</h2>
+      </div>
+      
+      
+      <div style="text-align: center; margin-top: 100px; padding-left: 150px;">
+        <a href="http://www.linkedin.com/in/aniketgawali03" target="_blank" style="padding-right: 100px; color:#333; ">
+          <i class="fab fa-linkedin" style="font-size: 120px;"></i>
+        </a>
+        <a href="https://github.com/Aniket03gawali" target="_blank" style="padding-right: 100px; color: #333;">
+          <i class="fab fa-github" style="font-size: 120px;"></i>
+        </a>
+        <a href="https://x.com/aniket_gaw2051" target="_blank" style="padding-right: 100px; color:#333;">
+          <i class="fab fa-twitter" style="font-size:120px;"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  
+    <script src="login.js"></script>
+</body>
+</html>
